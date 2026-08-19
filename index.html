@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ObservaMinas, painéis de indicadores</title>
+<meta name="description" content="Painéis de indicadores de autonomia econômica e de qualificação e formação das mulheres em Minas Gerais.">
+<style>
+:root{
+  --marca:#7A5A9C; --marca-escuro:#5B4175; --marca-claro:#EEE8F3;
+  --ground:#FAF8FB; --surface:#FFFFFF; --surface-2:#F4F0F7;
+  --ink:#241D2B; --ink-2:#4E4459; --muted:#786D83; --line:#E5DEEB;
+  --mulher:#6B4A8E; --homem:#519489;
+  --shadow:0 1px 2px rgba(36,29,43,.05), 0 6px 20px rgba(36,29,43,.07);
+  --serif:Georgia,"Times New Roman",serif;
+  --sans:"Segoe UI",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#17131C; --surface:#211B27; --surface-2:#2A2331;
+    --ink:#F2EEF5; --ink-2:#CFC6D6; --muted:#9C90A6; --line:#372E40;
+    --marca-claro:#2E2438;
+    --shadow:0 1px 2px rgba(0,0,0,.45), 0 6px 20px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#17131C; --surface:#211B27; --surface-2:#2A2331;
+  --ink:#F2EEF5; --ink-2:#CFC6D6; --muted:#9C90A6; --line:#372E40;
+  --marca-claro:#2E2438;
+  --shadow:0 1px 2px rgba(0,0,0,.45), 0 6px 20px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--ground); color:var(--ink);
+  font-family:var(--serif); font-size:16px; line-height:1.6;
+}
+header{
+  background:var(--marca); color:#fff; padding:20px 26px;
+  display:flex; align-items:center; gap:18px; flex-wrap:wrap;
+  font-family:var(--sans);
+}
+header h1{
+  margin:0; font-size:22px; font-weight:400; letter-spacing:.02em;
+  text-transform:uppercase; line-height:1.05;
+}
+header h1 b{display:block; font-weight:700; letter-spacing:.06em}
+header .rule{width:1px; align-self:stretch; background:rgba(255,255,255,.35)}
+header .sub{color:rgba(255,255,255,.9); font-size:13.5px; max-width:52ch}
+main{max-width:1000px; margin:0 auto; padding:40px 26px 70px}
+.intro{font-size:18px; color:var(--ink-2); max-width:64ch; margin:0 0 36px}
+.paineis{display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:22px}
+.painel{
+  background:var(--surface); border:1px solid var(--line); border-radius:12px;
+  padding:26px 26px 24px; box-shadow:var(--shadow);
+  display:flex; flex-direction:column; gap:12px;
+}
+.painel h2{margin:0; font-size:20px; line-height:1.25}
+.painel .tag{
+  font-family:var(--sans); font-size:11px; letter-spacing:.12em;
+  text-transform:uppercase; color:var(--muted); font-weight:600;
+}
+.painel p{margin:0; color:var(--ink-2); font-size:15px}
+.painel ul{margin:2px 0 0; padding-left:20px; color:var(--muted); font-size:14px}
+.painel li{margin:3px 0}
+.painel a.botao{
+  margin-top:auto; align-self:flex-start; font-family:var(--sans);
+  background:var(--marca); color:#fff; text-decoration:none;
+  padding:11px 20px; border-radius:8px; font-size:14.5px; font-weight:600;
+}
+.painel a.botao:hover{background:var(--marca-escuro)}
+.nota{
+  margin-top:40px; background:var(--surface-2); border-left:3px solid var(--marca);
+  border-radius:0 10px 10px 0; padding:20px 24px; font-size:14.5px; color:var(--ink-2);
+}
+.nota h3{margin:0 0 8px; font-size:15px; font-family:var(--sans); letter-spacing:.02em}
+.nota p{margin:8px 0 0}
+footer{
+  border-top:1px solid var(--line); margin-top:44px; padding-top:20px;
+  font-family:var(--sans); font-size:13px; color:var(--muted);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Observa<b>Minas</b></h1>
+  <span class="rule"></span>
+  <div>
+    <div class="sub">Indicadores de gênero em Minas Gerais</div>
+  </div>
+</header>
+
+<main>
+  <p class="intro">
+    Dois painéis de indicadores sobre a vida das mulheres em Minas Gerais, com série
+    histórica, comparação com o Brasil e recorte pelos 853 municípios.
+  </p>
+
+  <div class="paineis">
+    <section class="painel">
+      <span class="tag">Eixo 1</span>
+      <h2>Autonomia econômica e mercado de trabalho</h2>
+      <p>Vinte e oito indicadores sobre inserção no mercado, rendimento, informalidade,
+         trabalho de cuidado e proteção social.</p>
+      <ul>
+        <li>Participação, ocupação e desocupação, de 2012 a 2025</li>
+        <li>Hiato salarial por ocupação, escolaridade e cor ou raça</li>
+        <li>Horas em afazeres domésticos e cuidados</li>
+        <li>Cobertura de creche nos 853 municípios</li>
+      </ul>
+      <a class="botao" href="painel_autonomia.html">Abrir o painel</a>
+    </section>
+
+    <section class="painel">
+      <span class="tag">Eixo 2</span>
+      <h2>Qualificação e formação</h2>
+      <p>Quatorze indicadores sobre escolaridade, trajetória escolar, ensino superior
+         e pós-graduação.</p>
+      <ul>
+        <li>Analfabetismo e nível de instrução da população adulta</li>
+        <li>Matrículas, ingresso e conclusão no ensino superior</li>
+        <li>Segregação de gênero por área do conhecimento</li>
+        <li>Bolsas de pesquisa e títulos de pós-graduação</li>
+      </ul>
+      <a class="botao" href="painel_qualificacao.html">Abrir o painel</a>
+    </section>
+  </div>
+
+  <div class="nota">
+    <h3>Como ler</h3>
+    <p>Cada indicador traz, no pé da página, uma <b>nota do indicador</b> com a regra de
+       cálculo, as variáveis usadas, a base de dados com link para a tabela de origem e
+       uma linha explicando o que o número quer dizer.</p>
+    <p>As fontes são oficiais e primárias: Censo Demográfico e PNAD Contínua do IBGE,
+       Censo Escolar e Censo da Educação Superior do INEP, RAIS do Ministério do
+       Trabalho, MI Social do MDS, e dados de bolsas da CAPES, do CNPq e da FAPEMIG.</p>
+  </div>
+
+  <footer>
+    Os painéis são arquivos autocontidos: funcionam sem conexão depois de carregados e
+    não dependem de nenhum serviço externo.
+  </footer>
+</main>
+
+</body>
+</html>
