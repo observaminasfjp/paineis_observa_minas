@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ObservaMinas, painéis de indicadores</title>
-<meta name="description" content="Painéis de indicadores de autonomia econômica, qualificação e formação e perfil demográfico das mulheres em Minas Gerais.">
+<meta name="description" content="Painel de Educação e Painel de Mercado de Trabalho: indicadores sobre as mulheres de Minas Gerais.">
 <style>
 :root{
   --marca:#7A5A9C; --marca-escuro:#5B4175; --marca-claro:#EEE8F3;
@@ -55,6 +55,7 @@ main{max-width:1000px; margin:0 auto; padding:40px 26px 70px}
   display:flex; flex-direction:column; gap:12px;
 }
 .painel h2{margin:0; font-size:20px; line-height:1.25}
+.painel h2 .h2-desc{display:block; margin-top:6px; font-size:15px; font-weight:400; color:var(--ink-2); line-height:1.4}
 .painel .tag{
   font-family:var(--sans); font-size:11px; letter-spacing:.12em;
   text-transform:uppercase; color:var(--muted); font-weight:600;
@@ -99,7 +100,7 @@ footer{
   <div class="paineis">
     <section class="painel">
       <span class="tag">Eixo 1</span>
-      <h2>Painel de Educação e Qualificação das Mulheres de Minas Gerais</h2>
+      <h2>Painel de Educação<span class="h2-desc">Indicadores de formação e qualificação das mulheres de Minas Gerais</span></h2>
       <p>Dezessete indicadores sobre escolaridade, trajetória escolar, ensino superior
          e pós-graduação.</p>
       <ul>
@@ -113,7 +114,7 @@ footer{
     </section>
     <section class="painel">
       <span class="tag">Eixo 2</span>
-      <h2>Painel de Mercado de Trabalho e Autonomia Econômica das Mulheres de Minas Gerais</h2>
+      <h2>Painel de Mercado de Trabalho<span class="h2-desc">Indicadores de participação na força de trabalho e de autonomia econômica das mulheres de Minas Gerais</span></h2>
       <p>Vinte e oito indicadores sobre inserção no mercado, rendimento, informalidade,
          trabalho de cuidado e proteção social.</p>
       <ul>
